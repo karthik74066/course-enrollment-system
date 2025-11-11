@@ -1,0 +1,206 @@
+# ==========================================================
+# BACKEND (Spring Boot / Maven)
+# ==========================================================
+
+# Maven build and wrapper
+enrollment-system-backend/target/
+enrollment-system-backend/.mvn/
+enrollment-system-backend/mvnw
+enrollment-system-backend/mvnw.cmd
+enrollment-system-backend/HELP.md
+
+# Database files
+enrollment-system-backend/*.db
+enrollment-system-backend/*.db-journal
+*.db
+*.db-journal
+
+# Logs
+enrollment-system-backend/*.log
+enrollment-system-backend/logs/
+
+# Spring Tool Suite / Eclipse / IntelliJ build artifacts
+enrollment-system-backend/.apt_generated
+enrollment-system-backend/.classpath
+enrollment-system-backend/.factorypath
+enrollment-system-backend/.project
+enrollment-system-backend/.settings
+enrollment-system-backend/.springBeans
+enrollment-system-backend/.sts4-cache
+
+# ==========================================================
+# FRONTEND (React / Node.js)
+# ==========================================================
+
+# Dependencies
+enrollment-frontend/node_modules/
+enrollment-frontend/.pnp
+enrollment-frontend/.pnp.js
+
+# Testing output
+enrollment-frontend/coverage/
+
+# Production builds
+enrollment-frontend/build/
+enrollment-frontend/dist/
+
+# Environment variables
+enrollment-frontend/.env
+enrollment-frontend/.env.*
+!enrollment-frontend/.env.example  # keep example envs if any
+
+# Lint and bundler caches
+enrollment-frontend/.eslintcache
+enrollment-frontend/.parcel-cache
+enrollment-frontend/.vite
+
+# Logs
+enrollment-frontend/npm-debug.log*
+enrollment-frontend/yarn-debug.log*
+enrollment-frontend/yarn-error.log*
+enrollment-frontend/lerna-debug.log*
+enrollment-frontend/.pnpm-debug.log*
+
+# Misc
+enrollment-frontend/.DS_Store
+
+# ==========================================================
+# IDEs and Editors
+# ==========================================================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse / STS
+.classpath
+.project
+.settings/
+.metadata/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / temp files
+*.swp
+*.swo
+*~
+
+# ==========================================================
+# OPERATING SYSTEM FILES
+# ==========================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==========================================================
+# PACKAGE MANAGERS
+# ==========================================================
+
+# npm / Yarn dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ✅ Keep lockfiles committed for deterministic builds
+# DO NOT ignore package-lock.json or yarn.lock
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ==========================================================
+# CI/CD and DEPLOYMENT
+# ==========================================================
+
+# GitHub Actions logs
+.github/workflows/*.log
+
+# Docker
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# ==========================================================
+# MISCELLANEOUS
+# ==========================================================
+
+# Temporary and cache files
+*.tmp
+*.temp
+*.bak
+*.cache
+*.old
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Compiled binaries
+*.class
+*.jar
+*.war
+*.ear
+
+# Sensitive data
+.env
+*.key
+*.pem
+*.crt
+secrets/
+credentials/
+
+# Test coverage
+coverage/
+*.lcov
+.nyc_output/

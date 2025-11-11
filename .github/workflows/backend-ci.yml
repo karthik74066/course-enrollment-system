@@ -1,0 +1,44 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'enrollment-system-backend/**'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'enrollment-system-backend/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    
+    - name: Build with Maven
+      working-directory: ./enrollment-system-backend
+      run: mvn clean install -DskipTests
+    
+    - name: Run Tests
+      working-directory: ./enrollment-system-backend
+      run: mvn test
+    
+    - name: Build JAR
+      working-directory: ./enrollment-system-backend
+      run: mvn package -DskipTests
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4  # Updated to v4
+      with:
+        name: backend-jar
+        path: enrollment-system-backend/target/*.jar
